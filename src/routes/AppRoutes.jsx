@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import CustomerRoutes from "../routes/CustomerRoutes";
@@ -12,8 +13,15 @@ export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Admin login is standalone (no sidebar) */}
-        <Route path="/admin/login" element={<Login />} />
+        {/* Admin Login - Customer Layout */}
+        <Route
+          path="/admin/login"
+          element={
+            <CustomerLayout>
+              <Login />
+            </CustomerLayout>
+          }
+        />
 
         {/* Admin Routes */}
         <Route
@@ -38,3 +46,4 @@ export default function AppRoutes() {
     </BrowserRouter>
   );
 }
+
