@@ -12,13 +12,13 @@ export default function CustomerRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/garages" element={<GarageList />} />
-      <Route path="/garage/:id" element={<GarageDetails />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/login" element={<Auth />} />
-      <Route path="/register" element={<Auth initialMode="register" />} />
-      <Route path="/my-bookings" element={<MyBookings />} />
+      <Route path="garages" element={<GarageList />} />
+      <Route path="garage/:id" element={<GarageDetails />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="login" element={<Auth />} />
+      <Route path="register" element={<Auth initialMode="register" />} />
+      <Route path="my-bookings" element={<MyBookings />} />
     </Routes>
   );
 }

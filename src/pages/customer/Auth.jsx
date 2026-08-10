@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 export default function Auth({ initialMode = "login" }) {
-  const [mode] = useState(initialMode === "register" ? "register" : "login");
+  const mode = initialMode === "register" ? "register" : "login";
   const [form, setForm] = useState({ name: "", email: "", password: "", phone: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
