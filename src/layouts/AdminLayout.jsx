@@ -32,24 +32,26 @@ export default function AdminLayout({ children }) {
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:static z-40 w-64 bg-black/80 shadow-lg h-screen flex flex-col
-        transform transition-transform duration-300
-        ${open ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
-      >
-        <Sidebar />
-        
+  className={`fixed md:static z-40 w-64 bg-black/80 shadow-lg h-screen flex flex-col
+  transform transition-transform duration-300
+  ${open ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
+>
+  <Sidebar
+    sidebarOpen={open}
+    setSidebarOpen={setOpen}
+  />
 
-        {/* Logout */}
-        <div className="px-4 py-4 mt-4 border-t">
-          <button
-            onClick={handleLogout}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition"
-          >
-            <LogOut size={18} />
-            Logout
-          </button>
-        </div>
-      </aside>
+  {/* Logout */}
+  <div className="px-4 py-4 mt-4 border-t">
+    <button
+      onClick={handleLogout}
+      className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition"
+    >
+      <LogOut size={18} />
+      Logout
+    </button>
+  </div>
+</aside>
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col">

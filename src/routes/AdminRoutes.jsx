@@ -17,10 +17,10 @@ export default function AdminRoutes() {
   return (
     <Routes>
       <Route path="/" element={<AdminDashboard />} />
-      <Route path="/garages" element={<ManageGarages />} />
-      <Route path="/bookings" element={<Bookings />} />
-      <Route path="/users" element={<Users />} />
-      <Route path="/add-garage" element={<AddGarage />} />
+      <Route path="garages" element={<ManageGarages />} />
+      <Route path="bookings" element={<Bookings />} />
+      <Route path="users" element={<Users />} />
+      <Route path="add-garage" element={<AddGarage />} />
     </Routes>
   );
 }
